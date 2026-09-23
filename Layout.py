@@ -1,8 +1,8 @@
-import Graph
+from Graph import Graph
 
 
 class Layout:
-    def __init__(self, layoutName, numqubits):
-        self.G = Graph.Graph()
-        self.layout_algorithm = layoutName
-        self.numqubits = numqubits
+    def __init__(self, architecture_type, num_qubits):
+        self.graph = Graph()
+        self.architecture_type = architecture_type
+        self.num_qubits = num_qubits

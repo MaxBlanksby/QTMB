@@ -10,7 +10,7 @@ class Solution:
 
 
     #constructor
-    def __init__(self, architecture_type, native_gate_set, num_qubits=6):
+    def __init__(self, architecture_type, native_gate_set, num_qubits):
         try:
             layout_type = self._architecture_types[architecture_type.lower()]
         except AttributeError as error:

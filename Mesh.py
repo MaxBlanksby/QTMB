@@ -2,7 +2,7 @@ from Layout import Layout
 
 
 class Mesh(Layout):
-    def __init__(self, num_qubits=0):
+    def __init__(self, num_qubits):
         super().__init__("mesh", num_qubits)
         self._build_graph()
 

@@ -2,7 +2,7 @@ from Layout import Layout
 
 
 class Heavyhex(Layout):
-    def __init__(self, num_qubits=6):
+    def __init__(self, num_qubits):
         super().__init__("heavyhex", num_qubits)
         self._build_graph()
 

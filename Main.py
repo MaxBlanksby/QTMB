@@ -21,6 +21,6 @@ print(qc)
 
 
 native_gate_set = ["H", "X", "Y", "Z", "CNOT"]
-solution = Solution("mesh", native_gate_set, num_qubits=num_qubits)
+solution = Solution("mesh", native_gate_set, num_qubits=num_qubits, quantumCircuit=qc)
 solution.describe(print_to_terminal=True)
 solution.visualize()

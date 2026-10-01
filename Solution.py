@@ -10,20 +10,12 @@ class Solution:
 
 
     #constructor
-    def __init__(self, architecture_type, native_gate_set, num_qubits):
-        try:
-            layout_type = self._architecture_types[architecture_type.lower()]
-        except AttributeError as error:
-            raise TypeError("architecture_type must be a string") from error
-        except KeyError as error:
-            available_types = ", ".join(self._architecture_types)
-            raise ValueError(
-                f"Unsupported architecture type: {architecture_type}. "
-                f"Choose one of: {available_types}."
-            ) from error
-
+    def __init__(self, architecture_type, native_gate_set, num_qubits, quantumCircuit):
+        
+        layout_type = self._architecture_types[architecture_type.lower()]
         self.layout = layout_type(num_qubits)
         self.native_gate_set = list(native_gate_set)
+        self.quantumCircuit = quantumCircuit
 
 
 
